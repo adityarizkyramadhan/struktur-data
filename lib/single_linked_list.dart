@@ -49,4 +49,12 @@ class SingleLinkedList<T> {
     size++;
     return true;
   }
+
+  NodeLinkedList? removeFirst() {
+    NodeLinkedList? temp = first;
+    first = first?.next;
+    temp?.next = null;
+    size--;
+    return temp;
+  }
 }
