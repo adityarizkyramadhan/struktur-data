@@ -16,7 +16,16 @@ class Stack<T> {
     return;
   }
 
-  NodeStack? pop() {
-    return null;
+  T pop() {
+    NodeStack? temp = head;
+    if (head == null) {
+      head = null;
+      head?.next = null;
+      return temp?.data;
+    }
+
+    head = head?.next;
+    temp?.next = null;
+    return temp?.data;
   }
 }
