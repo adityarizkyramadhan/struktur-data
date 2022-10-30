@@ -15,4 +15,17 @@ void main(List<String> arguments) {
   for (int i = 0; i < data.size; i++) {
     print(data.getDataByIndex(i));
   }
+  data.addLast(7);
+  data.addFirst(6);
+  print("Data :");
+  for (int i = 0; i < data.size; i++) {
+    print(data.getDataByIndex(i));
+  }
+  NodeLinkedList? temp = data.removeLast();
+  print("Data remove last: ");
+  print(temp?.data);
+  print("Data :");
+  for (int i = 0; i < data.size; i++) {
+    print(data.getDataByIndex(i));
+  }
 }

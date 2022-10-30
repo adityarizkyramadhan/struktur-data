@@ -57,4 +57,15 @@ class SingleLinkedList<T> {
     size--;
     return temp;
   }
+
+  NodeLinkedList? removeLast() {
+    NodeLinkedList? curr = first;
+    while (curr?.next?.next != null) {
+      curr = curr?.next;
+    }
+    NodeLinkedList? temp = curr?.next;
+    curr?.next = null;
+    size--;
+    return temp;
+  }
 }
